@@ -168,6 +168,7 @@
                     int idConsulta = DaoUsuario.consultarId(email);
                     u.setId(idConsulta);
                     DaoUsuario.setUsuarioLogado(u);
+                    session.setAttribute("usuario","comumLogado");
                     response.sendRedirect("index.jsp");
                 }
                 else{

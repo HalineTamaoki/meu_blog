@@ -10,10 +10,12 @@
 <%
     Usuario u = DaoUsuario.getUsuarioLogado();
     Usuario uLogado = new Usuario();
+    String usuario = (String) session.getAttribute("usuario");
+
     Boolean administrador = false;
-    if(u!=null){
+    if(usuario!=null){
        uLogado = u;
-       if(uLogado.isAdministrador()){
+       if(usuario.equals("administrador")){
             administrador = true;
        }
     }

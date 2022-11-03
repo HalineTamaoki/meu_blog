@@ -4,5 +4,6 @@
 
 <%
     DaoUsuario.deslogar();
+    session.invalidate();
     response.sendRedirect("index.jsp");
 %>

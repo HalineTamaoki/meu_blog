@@ -5,13 +5,11 @@
 <%@page import="com.blog.entidades.Usuario"%>
 
 <%
-    Usuario uLogado = DaoUsuario.getUsuarioLogado();
-    Boolean administrador = false;
-    if(uLogado!=null){
-       if(uLogado.isAdministrador()){
-            administrador = true;
-       }
-    }
+   String usuario = (String) session.getAttribute("usuario");
+   Boolean administrador = false;
+   if(usuario.equals("administrador")){
+        administrador = true;
+   }
 %>
 <!DOCTYPE html>
 <html lang="en">
