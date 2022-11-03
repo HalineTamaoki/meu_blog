@@ -1,0 +1,38 @@
+.pl-custom-container{
+    margin-top: 3.4%;
+    padding: 5%;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 1%;
+}
+
+.custom-p{
+    font-size: 0.8em;
+}
+
+.pl-custom-failmsg{
+    font-size: 0.8em;
+    margin-top: 4px;
+    padding-left: 3px;
+    color: red;
+}
+
+.custom-avatar-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.pc-custom-avatar img{
+    width: 50%;
+    height: 50%;
+    margin-left: 10%;
+}
+
+.form-check{
+    margin-bottom: 15%;
+}
+
+.custom-p-avatar{
+    font-size: 1.1em;
+}

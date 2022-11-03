@@ -1,0 +1,64 @@
+.section-title p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.pp-custom-card{
+    display: grid;
+    grid-template-columns: 5% 95%;
+    grid-gap: 1%;
+    padding: 1% 2%;
+    align-items: center;
+    margin-bottom: 0.5%;
+}
+.pp-custom-card img{
+    max-width: 70%;
+}
+
+.custom-popup-logar{
+    position: fixed;
+    background-color: #EEE4DB;
+    top: 40%;
+    left: 30%;
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 30%;
+    width: 40%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.custom-popup-logar p{
+    margin-top: 5%;
+}
+
+.custom-popup-logar a{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+
+.custom-popup-logar a:hover{
+    text-decoration: underline;
+}
+
+.custom-popup-comentar{
+    position: fixed;
+    background-color: #EEE4DB;
+    top: 25%;
+    left: 30%;
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+    max-height: 43%;
+    width: 40%;
+    text-align: center;
+}
+
+textarea{
+    resize: none;
+}
+
+.pp-custom-btn:hover{
+    border: 1px solid black;
+}

@@ -1,0 +1,45 @@
+.pl-custom-container{
+    margin-top: 3.4%;
+    padding: 5%;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 1%;
+}
+
+.custom-p{
+    font-size: 0.8em;
+}
+
+#custom-button2{
+    background-color: #EEE4DB;
+    color: black;
+    padding: 3% 6%;
+    border: black solid 1px;
+    font-size: 1.1em;
+}
+
+#custom-button2:hover{
+    background-color: black;
+    color: white;
+    box-shadow: #a6a6a6 0 0 6px;
+} 
+
+#custom-button1{
+    color: black;
+    padding: 3% 6%;
+    font-size: 1.1em;
+}
+
+#custom-button1:hover{
+    border: 1px solid black;
+    box-shadow: #a6a6a6 0 0 6px;
+} 
+
+
+.pl-custom-failmsg{
+    font-size: 0.8em;
+    margin-top: 4px;
+    padding-left: 3px;
+    color: red;
+}

@@ -1,0 +1,44 @@
+.pi-cover img{
+    max-height: 25vh;
+    width: 100%;
+    filter: blur(1.5px);
+}
+.pi-posts-container{
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-gap: 3%;
+}
+
+.custom-pi-card{
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-pi-card a{
+    background-color: #EEE4DB;
+    border: 1px #EEE4DB solid;
+    color: black;
+}
+
+.custom-pi-card a:hover{
+    background-color: black;
+    color: white;
+}
+
+.pi-custom-a{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.pi-custom-a a{
+    background-color: #EEE4DB;
+    color: black;
+    font-size: 1.25em;
+    padding: 0.8% 2%;
+}
+
+.pi-custom-a a:hover{
+    background-color: black;
+    color: white;
+}

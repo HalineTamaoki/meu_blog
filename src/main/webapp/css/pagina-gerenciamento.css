@@ -1,0 +1,79 @@
+.pg-custom-card{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 80% 10% 10%;
+    margin-bottom: 1%;
+    border-radius: 5px
+}
+
+.pg-custom-card-div p{
+    margin: 0;
+    font-weight: bold;
+}
+
+.pg-custom-card-div{
+    padding: 1% 2%;
+}
+
+.pg-custom-card span{
+    font-weight: normal;
+}
+
+.pg-custom-btn-aprovar button{
+    border: none;
+    width: 100%;
+    background-color: rgb(76, 175, 76);
+}
+
+.pg-custom-btn-aprovar button:hover{
+    background-color: green
+}
+.pg-custom-btn-reprovar button{
+    border: none;
+    background-color: rgb(216, 94, 94);
+    width: 100%;
+}
+
+.pg-custom-btn-reprovar button:hover{
+    background-color: red;
+}
+
+.action-img{
+    min-width: 20px;
+    max-width: 30px;
+}
+
+.custom-popup-excluir{
+    position: fixed;
+    background-color: #EEE4DB;
+    top: 40%;
+    left: 30%;
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 22%;
+    width: 40%;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.table-button{
+    background-color: white;
+    border: none;
+}
+
+.custom-btn-popup-aprovar{
+    background-color: rgb(76, 175, 76);
+}
+
+.custom-btn-popup-aprovar:hover{
+    background-color: green
+}
+
+.custom-btn-popup-reprovar{
+    background-color: rgb(216, 94, 94);
+}
+
+.custom-btn-popup-reprovar:hover{
+    background-color: red;
+}

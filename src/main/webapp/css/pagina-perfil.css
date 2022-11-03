@@ -1,0 +1,102 @@
+.pp-custom-container{
+    margin: 0 10%;
+}
+
+.pp-custom-container img{
+    border: 1px solid black;
+    border-radius: 100%;
+    padding: 20px;
+}
+
+.pp-custom-container1{
+    margin: 0 15%;
+}
+
+.pp-custom-container1 p,b, label{
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.custom-popup-excluir{
+    position: fixed;
+    background-color: #EEE4DB;
+    top: 40%;
+    left: 30%;
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 22%;
+    width: 40%;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.custom-popup-logar p{
+    margin-top: 5%;
+}
+
+.pp-custom-container-btn{
+    background-color: white;
+    border: none;
+    margin-top: 2%;
+    color: blue;
+    text-decoration: underline;
+}
+.pp-custom-container-btn:hover{
+    color: rgb(19, 19, 97);
+}
+
+.custom-popup-trocarAvatar{
+    position: fixed;
+    background-color: #EEE4DB;
+    top: 25%;
+    left: 30%;
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+    max-height: 43%;
+    width: 40%;
+    text-align: center;
+}
+
+.custom-avatar-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.pc-custom-avatar img{
+    width: 50%;
+    height: 50%;
+    margin-left: 10%;
+}
+
+.form-check{
+    margin-bottom: 15%;
+}
+
+.pp-custom-btn:hover{
+    border: 1px solid black;
+}
+
+.custom-popup-alterarSenha{
+    position: fixed;
+    background-color: #EEE4DB;
+    top: 25%;
+    left: 30%;
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+    max-height: 43%;
+    width: 40%;
+}
+
+.pp-custom-failmsg{
+    font-size: 0.8em;
+    margin-top: 4px;
+    padding-left: 3px;
+    color: red;
+}
+
+ .blockScreen{
+     pointer-events: none;
+ }
