@@ -10,7 +10,7 @@ public class Conexao {
         Connection con  = null;
         String url ="jdbc:mysql://localhost/meu_blog";
         String user = "root";
-        String password = "root";
+        String password = "xxxxx";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
