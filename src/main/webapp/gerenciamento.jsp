@@ -8,7 +8,15 @@
 <%@ page import ="java.util.List"%>
 
 <%
-    Usuario uLogado = DaoUsuario.getUsuarioLogado();
+    Usuario u = DaoUsuario.getUsuarioLogado();
+    Usuario uLogado = new Usuario();
+    Boolean administrador = false;
+    if(u!=null){
+       uLogado = u;
+       if(uLogado.isAdministrador()){
+            administrador = true;
+       }
+    }
     List <Comentario> listaAguardando = DaoComentario.consultarComentarioAguardandoAprovacao();
 %>
 
@@ -25,7 +33,7 @@
     <link rel="stylesheet" href="./css/pagina-gerenciamento.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload=<%out.write("'liberarAcesso("+administrador+")'");%>>
     <header class="d-flex justify-content-between align-items-center">
         <a href="index.jsp">Voltar para página inicial</a>
         <a href="gerenciarPost.jsp">Gerenciar Posts</a>
@@ -71,8 +79,24 @@
         </div>
         <p class=<%if(!listaAguardando.isEmpty()){out.write("'hide'");}%>>Nenhum comentário precisando de aprovação 😄</p>
     </section>
-    <footer>
-        Developed by @HalineTamaoki
-    </footer>
 </body>
+
+<script>
+    function liberarAcesso(liberar){
+        if(liberar==false){
+            document.getElementsByTagName('body')[0].innerHTML=`<header class='d-flex justify-content-between align-items-center'>
+                                                                       <a href='index.jsp'>Voltar para página inicial</a>
+                                                                   </header>
+
+                                                                   <section>
+                                                                      <div class="section-title text-start">
+                                                                          <h1 class="fs-1 text-center">ACESSO NEGADO 🙁</h1>
+                                                                      </div>
+                                                                   </section>`
+        }
+    }
+</script>
+<footer>
+    Developed by @HalineTamaoki
+</footer>
 </html>
