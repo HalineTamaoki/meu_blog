@@ -19,7 +19,7 @@ CREATE SCHEMA `meu_blog`;
 3. Usando a IDE, instale todas as propriedades, dependências e plugins do arquivo pom.xml
 
 4. Inicie o arquivo usando o Maven -> jetty:run. 
-OBS: para rodar corretamente, é necessário estar com o JDK 1.8 instalado.
+<br>OBS: para rodar corretamente, é necessário estar com o JDK 1.8 instalado.
 
 5. Abra o projeto iniciando pela página principal. Esse passo é importante nesse cenário em que estamos usando o Localhost, pois na página principal ocorre a criação das tabelas de maneira automática.
 
