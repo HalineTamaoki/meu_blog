@@ -21,7 +21,7 @@ CREATE SCHEMA `meu_blog`;
 4. Inicie o arquivo usando o Maven -> jetty:run. 
 <br>OBS: para rodar corretamente, é necessário estar com o JDK 1.8 instalado.
 
-5. Abra o projeto iniciando pela página principal. Esse passo é importante nesse cenário em que estamos usando o Localhost, pois na página principal ocorre a criação das tabelas de maneira automática.
+5. Abra o projeto iniciando pela página principal. Esse passo é importante nesse cenário em que estamos usando o Localhost, pois na página principal ocorre a criação das tabelas e do usuário administrador de maneira automática.
 
 6. Navegue pelas telas!
     1. Para ver as telas de administrador, na página de login, use as credenciais:
