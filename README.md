@@ -6,14 +6,29 @@ Esse projeto foi desenvolvido como atividade avaliativa de JSP do curso da Prowa
 
 ## Como executar
 A fim de executar corretamente, siga os passos abaixo:
+
 1. Crie um banco de dados MySQL. Você pode criar com o mesmo nome usado no projeto usando o código abaixo no servidor de banco de dados:
 ``` 
 CREATE SCHEMA `meu_blog`;
 ```
 
 2. No arquivo Conexao.java ([src\main\java\com\blog\util](https://github.com/HalineTamaoki/meu_blog/blob/main/src/main/java/com/blog/util/Conexao.java)):
-  1. Na linha 11, insira o link para seu banco de dados. Caso haja criado com o mesmo nome do meu, não é necessário alterar.
-  2. Na linha 12 insira o seu usuário para acesso ao seu banco, e na 13, substitua "xxx
+    1. Na linha 11, insira o link para seu banco de dados. Caso haja criado com o mesmo nome do meu, não é necessário alterar.
+    2. Na linha 12 insira o seu usuário para acesso ao seu banco, e na 13, substitua "xxxx" pela sua senha.
+    
+3. Usando a IDE, instale todas as propriedades, dependências e plugins do arquivo pom.xml
+
+4. Inicie o arquivo usando o Maven -> jetty:run
+
+5. Abra o projeto iniciando pela página principal. Esse passo é importante nesse cenário em que estamos usando o Localhost, pois na página principal ocorre a criação das tabelas de maneira automática.
+
+6. Navegue pelas telas!
+    1. Para ver as telas de administrador, na página de login, use as credenciais:
+    ```
+      E-mail: adm@email.com
+      Senha: adm@email.com
+    ```
+    2. Caso queira popular o blog com dados hipotéticos, separei na pasta [src\main\resources\MySQL](https://github.com/HalineTamaoki/meu_blog/blob/main/src/main/resources/MySQL/01.%20Insert.sql) um script que você pode colocar no banco de dados. 
 
 ## Funcionalidades
 Cada tipo de usuário terá funcionalidades distintas de acordo com o permissionamento:
