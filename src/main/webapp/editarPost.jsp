@@ -1,10 +1,21 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="com.blog.dao.DaoPosts"%>
 <%@page import="com.blog.entidades.Post"%>
+<%@page import="com.blog.dao.DaoUsuario"%>
+<%@page import="com.blog.entidades.Usuario"%>
 
 <%
     int id = Integer.parseInt(request.getParameter("id"));
     Post post = DaoPosts.consultarPost(id);
+
+    Usuario uLogado = (Usuario) session.getAttribute("usuario");
+    Boolean administrador = false;
+
+    if(uLogado!=null){
+       if(uLogado.isAdministrador()){
+            administrador = true;
+       }
+    }
 %>
 
 <!DOCTYPE html>
@@ -20,7 +31,7 @@
     <link rel="stylesheet" href="./css/pagina-gerenciamento.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload=<%out.write("'liberarAcesso("+administrador+")'");%>>
     <header class="d-flex justify-content-between align-items-center">
         <a href="gerenciarPost.jsp">Voltar para gerenciamento de Posts</a>
     </header>
@@ -53,8 +64,24 @@
             }
         %>
     </section>
-    <footer>
-        Developed by @HalineTamaoki
-    </footer>
+
+    <script>
+        function liberarAcesso(liberar){
+            if(liberar==false){
+                document.getElementsByTagName('body')[0].innerHTML=`<header class='d-flex justify-content-between align-items-center'>
+                                                                           <a href='index.jsp'>Voltar para página inicial</a>
+                                                                       </header>
+
+                                                                       <section>
+                                                                          <div class="section-title text-start">
+                                                                              <h1 class="fs-1 text-center">ACESSO NEGADO 🙁</h1>
+                                                                          </div>
+                                                                       </section>`
+            }
+        }
+    </script>
 </body>
+<footer>
+    Developed by @HalineTamaoki
+</footer>
 </html>

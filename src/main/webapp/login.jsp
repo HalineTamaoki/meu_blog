@@ -53,13 +53,9 @@
         <%
             String email = request.getParameter("email");
             String senha = request.getParameter("senha");
-
-            if(DaoUsuario.fazerLogin(email, senha)){
-                String usuario = "comumLogado";
-                if(DaoUsuario.getUsuarioLogado().isAdministrador()){
-                    usuario = "administrador";
-                }
-                session.setAttribute("usuario",usuario);
+            Usuario u = DaoUsuario.fazerLogin(email, senha);
+            if(DaoUsuario.fazerLogin(email, senha)!=null){
+                session.setAttribute("usuario",u);
                 response.sendRedirect("index.jsp");
             }
         %>

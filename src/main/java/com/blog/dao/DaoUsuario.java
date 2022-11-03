@@ -9,21 +9,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DaoUsuario {
-    private static Usuario usuarioLogado;
     private static boolean loginCorreto = true;
     private static boolean emailCorretoCadastro = true;
-
-    public static void setUsuarioLogado(Usuario usuarioLogado) {
-        DaoUsuario.usuarioLogado = usuarioLogado;
-    }
 
     public static void setEmailCorretoCadastro(boolean emailCorretoCadastro) {
         DaoUsuario.emailCorretoCadastro = emailCorretoCadastro;
     }
 
-    public static Usuario getUsuarioLogado() {
-        return usuarioLogado;
-    }
     public static boolean isLoginCorreto() {
         return loginCorreto;
     }
@@ -93,7 +85,7 @@ public class DaoUsuario {
         }
     }
 
-    public static boolean fazerLogin(String email, String senha){
+    public static Usuario fazerLogin(String email, String senha){
         Connection con = Conexao.conectar();
 
         String sql = "select * from usuarios where email = ? and senha = ?;";
@@ -111,15 +103,14 @@ public class DaoUsuario {
                 u.setAvatarNum(rs.getInt("avatarNum"));
                 u.setAdministrador(rs.getBoolean("administrador"));
 
-                usuarioLogado = u;
-                return true;
+                return u;
             }
             else {
                 loginCorreto = false;
-                return false;
+                return null;
             }
         } catch (SQLException e) {
-            return false;
+            return null;
         }
     }
 
@@ -162,7 +153,6 @@ public class DaoUsuario {
     }
 
     public static void deslogar(){
-        usuarioLogado = null;
         loginCorreto=true;
         emailCorretoCadastro = true;
     }

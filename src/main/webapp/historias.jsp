@@ -10,7 +10,7 @@
     String headerUser = "'hide'";
     String nomeUser = "";
     int idUser = 0;
-    Usuario uLogado = DaoUsuario.getUsuarioLogado();
+    Usuario uLogado = (Usuario) session.getAttribute("usuario");
 
     if(uLogado!=null){
         nomeUser = uLogado.getNome();

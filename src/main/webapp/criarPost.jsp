@@ -5,11 +5,15 @@
 <%@page import="com.blog.entidades.Usuario"%>
 
 <%
-   String usuario = (String) session.getAttribute("usuario");
-   Boolean administrador = false;
-   if(usuario.equals("administrador")){
-        administrador = true;
-   }
+    Usuario uLogado = (Usuario) session.getAttribute("usuario");
+    Boolean administrador = false;
+
+    if(uLogado!=null){
+       if(uLogado.isAdministrador()){
+            administrador = true;
+       }
+    }
+
 %>
 <!DOCTYPE html>
 <html lang="en">

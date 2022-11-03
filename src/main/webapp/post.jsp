@@ -18,9 +18,9 @@
     String nomeUser = "";
     Boolean isLogado = false;
     int idUser = 0;
-    Usuario uLogado = DaoUsuario.getUsuarioLogado();
-    String usuario = (String) session.getAttribute("usuario");
-    if(usuario!=null){
+    Usuario uLogado = (Usuario) session.getAttribute("usuario");
+
+    if(uLogado!=null){
         isLogado=true;
         nomeUser = uLogado.getNome();
         idUser = uLogado.getId();

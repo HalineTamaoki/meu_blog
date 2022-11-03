@@ -4,7 +4,7 @@
 
 <%
     String headerAdm = "'hide'";
-    Usuario uLogado = DaoUsuario.getUsuarioLogado();
+    Usuario uLogado = (Usuario) session.getAttribute("usuario");
     String validacao="'hide'";
     if(!DaoUsuario.isEmailCorretoCadastro()){
         validacao= "'pp-custom-failmsg'";
@@ -75,7 +75,7 @@
 
                 Usuario user = new Usuario(nome, sobrenome, uLogado.getId(), uLogado.getAvatarNum(), email, uLogado.isAdministrador());
                 DaoUsuario.alterarUsuario(user);
-                DaoUsuario.setUsuarioLogado(user);
+                session.setAttribute("usuario",user);
                 DaoUsuario.setEmailCorretoCadastro(true);
                 response.sendRedirect("perfil.jsp");
             }
@@ -156,7 +156,7 @@
                     int avatarNum = Integer.parseInt(avatar);
                     Usuario userNewAvatar = new Usuario(uLogado.getNome(), uLogado.getSobrenome(), uLogado.getId(), avatarNum, uLogado.getEmail(), uLogado.isAdministrador());
                     DaoUsuario.alterarUsuario(userNewAvatar);
-                    DaoUsuario.setUsuarioLogado(userNewAvatar);
+                    session.setAttribute("usuario",userNewAvatar);
                     response.sendRedirect("perfil.jsp");
                 }
             %>

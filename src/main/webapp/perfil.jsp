@@ -5,7 +5,7 @@
 
 <%
     String headerAdm = "'hide'";
-    Usuario uLogado = DaoUsuario.getUsuarioLogado();
+    Usuario uLogado = (Usuario) session.getAttribute("usuario");
 
     if(uLogado!=null){
         if(uLogado.isAdministrador()){

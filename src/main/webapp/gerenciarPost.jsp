@@ -7,17 +7,15 @@
 <%@ page import ="java.util.List"%>
 
 <%
-    Usuario u = DaoUsuario.getUsuarioLogado();
-    Usuario uLogado = new Usuario();
-    String usuario = (String) session.getAttribute("usuario");
+    Usuario uLogado = (Usuario) session.getAttribute("usuario");
     Boolean administrador = false;
 
-    if(usuario!=null){
-       uLogado = u;
-       if(usuario.equals("administrador")){
+    if(uLogado!=null){
+       if(uLogado.isAdministrador()){
             administrador = true;
        }
     }
+
     List<Post> listaPosts = DaoPosts.consultarInvertido();
 %>
 
